@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>丁旭 | AI Coding 产品实践作品集</title>
+    <meta
+      name="description"
+      content="丁旭的 AI Coding 产品实践作品集：盾构隧道数字孪生与 AI 诊断系统。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="返回顶部">
+        <span class="brand-mark">DX</span>
+        <span>
+          <strong>丁旭</strong>
+          <small>AI Coding / 工程软件 / 数字孪生</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="作品集导航">
+        <a href="#overview">项目总览</a>
+        <a href="#product">产品设计</a>
+        <a href="#modules">系统模块</a>
+        <a href="#ai-coding">AI Coding</a>
+      </nav>
+      <a class="contact-link" href="mailto:ding.xu@zju.edu.cn">联系我</a>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell" id="overview">
+        <div class="hero-copy">
+          <p class="eyebrow">Case Study / 脱敏展示</p>
+          <h1>盾构隧道数字孪生与 AI 诊断系统</h1>
+          <p class="hero-lead">
+            面向地铁盾构施工数字化管理与结构安全诊断场景，独立设计并开发一套可演示数字孪生原型，
+            将三维空间对象、盾构时序数据、监测信息、地层模型和 AI 诊断解释整合到同一体验中。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#modules">查看系统截图</a>
+            <a class="secondary-button disabled" href="#" aria-disabled="true">演示视频待补充</a>
+          </div>
+          <p class="data-note">
+            注：页面截图与后续演示视频均基于脱敏历史样例数据及模拟展示数据生成，不包含敏感原始数据。
+          </p>
+        </div>
+        <div class="hero-visual image-frame" data-placeholder="主系统截图">
+          <img src="./assets/hero-main-scene.png" alt="盾构隧道数字孪生系统主界面" />
+        </div>
+      </section>
+
+      <section class="metric-strip section-shell" aria-label="项目关键指标">
+        <article>
+          <strong>10+</strong>
+          <span>交互功能模块</span>
+        </article>
+        <article>
+          <strong>20+</strong>
+          <span>Vue 前端组件</span>
+        </article>
+        <article>
+          <strong>5</strong>
+          <span>后端服务模块</span>
+        </article>
+        <article>
+          <strong>2</strong>
+          <span>发明专利申请</span>
+        </article>
+        <article>
+          <strong>多轮</strong>
+          <span>内部演示反馈</span>
+        </article>
+      </section>
+
+      <section class="product-section section-shell" id="product">
+        <div class="section-heading">
+          <p class="eyebrow">Product Thinking</p>
+          <h2>复杂工程场景的产品化挑战</h2>
+          <p>
+            这个项目的核心不是把数据“画出来”，而是把分散的工程对象、时间过程和诊断依据组织成可理解、可复盘、可解释的产品体验。
+          </p>
+        </div>
+        <div class="problem-solution-grid">
+          <div class="panel">
+            <h3>用户与场景</h3>
+            <ul class="stack-list">
+              <li><strong>课题组研究人员</strong><span>需要展示研究成果与系统能力</span></li>
+              <li><strong>合作单位相关人员</strong><span>需要快速理解施工状态和风险解释</span></li>
+              <li><strong>未来工程管理人员</strong><span>需要复盘施工过程并定位异常状态</span></li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>关键痛点</h3>
+            <ul class="check-list">
+              <li>工程数据来源分散，CSV、传感器、GeoJSON、GLB、钻孔数据难以统一理解</li>
+              <li>线路、盾构、地层、管片、监测点之间缺少统一空间视图</li>
+              <li>盾构推进参数是时序过程，静态表格难以支撑复盘分析</li>
+              <li>AI 诊断如果只给结论，用户难以判断依据是否可信</li>
+            </ul>
+          </div>
+          <div class="panel solution-panel">
+            <h3>产品方案</h3>
+            <div class="solution-cards">
+              <article><strong>三维主场景</strong><span>统一展示线路、站点、盾构、监测点和地层对象</span></article>
+              <article><strong>时序播放器</strong><span>支持按施工时间复盘推进过程</span></article>
+              <article><strong>地层建模模块</strong><span>将钻孔和地层数据转化为空间对象</span></article>
+              <article><strong>AI 诊断侧栏</strong><span>展示风险等级、关键指标和解释依据</span></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="modules-section section-shell" id="modules">
+        <div class="section-heading">
+          <p class="eyebrow">Prototype Modules</p>
+          <h2>核心功能模块展示</h2>
+          <p>
+            原型围绕“看清空间关系、回放施工过程、解释诊断依据”组织核心模块，展示复杂工程数据如何被转化为可浏览、可复盘、可解释的产品体验。
+          </p>
+        </div>
+
+        <div class="feature-mosaic">
+          <article class="feature-card">
+            <div class="image-frame" data-placeholder="三维主场景">
+              <img src="./assets/metro-network.png" alt="三维地铁线路与站点展示" />
+            </div>
+            <h3>三维主场景</h3>
+            <p>统一展示地铁线路、站点、监测点与地下空间对象，作为整个数字孪生原型的空间底座。</p>
+          </article>
+          <article class="feature-card">
+            <div class="image-frame" data-placeholder="盾构监控与 AI 诊断">
+              <img src="./assets/tbm-monitor-ai.png" alt="盾构监控与 AI 结构安全诊断侧栏" />
+            </div>
+            <h3>盾构监控与 AI 诊断</h3>
+            <p>把施工趋势、结构指标、风险等级和诊断解释放在同一视图中，避免 AI 只输出单句结论。</p>
+          </article>
+          <article class="feature-card">
+            <div class="image-frame" data-placeholder="掘进模拟">
+              <img src="./assets/tbm-digging-simulation.png" alt="盾构掘进模拟与实时监测数据" />
+            </div>
+            <h3>掘进模拟</h3>
+            <p>用三维动画表达盾构推进、管片拼装和施工参数变化，服务演示汇报场景。</p>
+          </article>
+          <article class="feature-card">
+            <div class="image-frame" data-placeholder="时序分析面板">
+              <img src="./assets/time-series-panel.png" alt="盾构响应分析时序图" />
+            </div>
+            <h3>时序回放与趋势分析</h3>
+            <p>围绕推进速度、总推力、刀盘响应等指标，支撑施工过程复盘。</p>
+          </article>
+          <article class="feature-card">
+            <div class="image-frame" data-placeholder="地层钻孔与开挖">
+              <img src="./assets/geology-excavation.png" alt="地层钻孔与开挖工具" />
+            </div>
+            <h3>地层与钻孔建模</h3>
+            <p>将钻孔、地层面和开挖区域转化为空间对象，辅助理解施工环境。</p>
+          </article>
+          <article class="feature-card">
+            <div class="image-frame" data-placeholder="环片监测视图">
+              <img src="./assets/tunnel-ring-monitor.png" alt="隧道环片监测与结构状态" />
+            </div>
+            <h3>环片监测视图</h3>
+            <p>展示监测区段、环片状态和关键变形指标，用于结构安全状态解释。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="ai-section section-shell" id="ai-coding">
+        <div class="section-heading">
+          <p class="eyebrow">AI Coding Observation</p>
+          <h2>AI Coding 在复杂项目中的使用体验观察</h2>
+          <p>
+            该项目开发过程中，我深度使用 Claude Code / Codex 辅助需求拆解、组件开发、后端接口、数据处理和调试。
+            我的观察来自真实复杂代码库，而不是简单 demo。
+          </p>
+        </div>
+        <div class="ai-grid">
+          <div class="panel">
+            <h3>我的使用流程</h3>
+            <ol class="flow-list">
+              <li><strong>需求拆解</strong><span>将系统拆分为三维场景、数据回放、地层模块、AI 诊断侧栏等任务</span></li>
+              <li><strong>上下文组织</strong><span>提供项目结构、关键文件、字段含义和业务规则</span></li>
+              <li><strong>代码生成</strong><span>辅助开发 Vue 组件、FastAPI 接口、Python 数据脚本</span></li>
+              <li><strong>调试修复</strong><span>根据报错、页面表现和接口返回结果多轮修正</span></li>
+              <li><strong>人工验收</strong><span>检查字段、链路、交互和业务逻辑是否符合预期</span></li>
+            </ol>
+          </div>
+          <div class="panel">
+            <h3>真实痛点</h3>
+            <div class="pain-card">
+              <strong>上下文容易断裂</strong>
+              <p>多文件任务中，AI 容易只改当前文件，漏掉 API、composable、组件和字段之间的联动。</p>
+            </div>
+            <div class="pain-card">
+              <strong>领域字段理解不稳定</strong>
+              <p>盾构环号、推进段、A-F 分区推力、结构利用率等字段有工程含义，需要反复补充背景。</p>
+            </div>
+            <div class="pain-card">
+              <strong>缺少任务级验收闭环</strong>
+              <p>AI 能生成代码，但很少主动说明改了哪些文件、影响哪些页面、应该验证哪些交互。</p>
+            </div>
+            <div class="pain-card">
+              <strong>压缩后信息缺失</strong>
+              <p>为了适配上下文长度，压缩项目说明后容易丢失关键约束，导致后续生成结果偏离真实业务逻辑。</p>
+            </div>
+          </div>
+          <div class="panel pm-panel">
+            <h3>如果我是 AI Coding 产品 PM</h3>
+            <ul class="check-list">
+              <li><strong>代码库上下文地图：</strong>帮助 AI 理解主链路和依赖关系</li>
+              <li><strong>任务级开发计划：</strong>修改前说明影响范围和风险点</li>
+              <li><strong>验收面板：</strong>生成 diff 摘要、验证清单和潜在问题提示</li>
+            </ul>
+            <p class="closing-note">
+              这个项目让我理解到：AI Coding 的核心价值不只是生成代码，而是在复杂业务项目中帮助开发者稳定理解上下文、控制变更风险，并完成可验证的任务闭环。
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>丁旭</strong>
+        <span>浙江大学工程师学院 · 土木水利硕士在读</span>
+      </div>
+      <div class="footer-links">
+        <a href="tel:15850261266">15850261266</a>
+        <a href="mailto:ding.xu@zju.edu.cn">ding.xu@zju.edu.cn</a>
+        <span>杭州</span>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
