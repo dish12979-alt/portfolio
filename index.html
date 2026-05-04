@@ -6,7 +6,7 @@
     <title>丁旭 | AI Coding 产品实践作品集</title>
     <meta
       name="description"
-      content="丁旭的 AI Coding 产品实践作品集：盾构隧道数字孪生与 AI 诊断系统。"
+      content="丁旭的 AI Coding 产品实践作品集：盾构隧道数字孪生与监测分析原型，展示复杂工程场景产品化和 AI Coding 使用体验观察。"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -24,6 +24,7 @@
         <a href="#product">产品设计</a>
         <a href="#modules">系统模块</a>
         <a href="#ai-coding">AI Coding</a>
+        <a href="#video">演示视频</a>
       </nav>
       <a class="contact-link" href="mailto:ding.xu@zju.edu.cn">联系我</a>
     </header>
@@ -32,17 +33,22 @@
       <section class="hero section-shell" id="overview">
         <div class="hero-copy">
           <p class="eyebrow">Case Study / 脱敏展示</p>
-          <h1>盾构隧道数字孪生与 AI 诊断系统</h1>
+          <h1>盾构隧道数字孪生与监测分析原型</h1>
           <p class="hero-lead">
-            面向地铁盾构施工数字化管理与结构安全诊断场景，独立设计并开发一套可演示数字孪生原型，
-            将三维空间对象、盾构时序数据、监测信息、地层模型和 AI 诊断解释整合到同一体验中。
+            面向地铁盾构施工数字化管理、结构安全监测和工程展示场景，独立设计并开发一套可演示数字孪生原型，
+            将三维空间对象、盾构时序数据、传感器监测、地层钻孔、环片运维和分析结果解释整合到同一产品体验中。
           </p>
           <div class="hero-actions">
             <a class="primary-button" href="#modules">查看系统截图</a>
-            <a class="secondary-button disabled" href="#" aria-disabled="true">演示视频待补充</a>
+            <a
+              class="secondary-button video-link"
+              href="https://fcngtbi6mzz1.feishu.cn/minutes/obcnfl6q7bd611726y84q73q?from=from_copylink"
+              target="_blank"
+              rel="noopener noreferrer"
+            >观看脱敏演示视频</a>
           </div>
           <p class="data-note">
-            注：页面截图与后续演示视频均基于脱敏历史样例数据及模拟展示数据生成，不包含敏感原始数据。
+            说明：页面截图与演示视频均基于脱敏历史样例数据及模拟展示数据生成，不包含敏感原始数据、合作单位内部资料或未公开分析模块细节。
           </p>
         </div>
         <div class="hero-visual image-frame" data-placeholder="主系统截图">
@@ -78,34 +84,35 @@
           <p class="eyebrow">Product Thinking</p>
           <h2>复杂工程场景的产品化挑战</h2>
           <p>
-            这个项目的核心不是把数据“画出来”，而是把分散的工程对象、时间过程和诊断依据组织成可理解、可复盘、可解释的产品体验。
+            这个项目的重点不是简单把数据“画出来”，而是把分散的工程对象、时间过程、空间关系和分析依据组织成可理解、可复盘、可解释的产品体验。
           </p>
         </div>
         <div class="problem-solution-grid">
           <div class="panel">
             <h3>用户与场景</h3>
             <ul class="stack-list">
-              <li><strong>课题组研究人员</strong><span>需要展示研究成果与系统能力</span></li>
-              <li><strong>合作单位相关人员</strong><span>需要快速理解施工状态和风险解释</span></li>
-              <li><strong>未来工程管理人员</strong><span>需要复盘施工过程并定位异常状态</span></li>
+              <li><strong>课题组研究人员</strong><span>需要把复杂工程数据转化为可展示、可复盘的系统原型</span></li>
+              <li><strong>合作单位相关人员</strong><span>需要快速理解施工状态、监测结果和分析依据</span></li>
+              <li><strong>未来工程管理人员</strong><span>需要在空间视图中定位异常状态，并回看对应施工过程</span></li>
             </ul>
           </div>
           <div class="panel">
-            <h3>关键痛点</h3>
+            <h3>真实痛点</h3>
             <ul class="check-list">
               <li>工程数据来源分散，CSV、传感器、GeoJSON、GLB、钻孔数据难以统一理解</li>
               <li>线路、盾构、地层、管片、监测点之间缺少统一空间视图</li>
               <li>盾构推进参数是时序过程，静态表格难以支撑复盘分析</li>
-              <li>AI 诊断如果只给结论，用户难以判断依据是否可信</li>
+              <li>AI/分析模块如果只给结论，用户难以判断依据是否可信</li>
+              <li>复杂项目信息压缩后容易丢失约束，影响后续开发和功能验收</li>
             </ul>
           </div>
           <div class="panel solution-panel">
             <h3>产品方案</h3>
             <div class="solution-cards">
-              <article><strong>三维主场景</strong><span>统一展示线路、站点、盾构、监测点和地层对象</span></article>
-              <article><strong>时序播放器</strong><span>支持按施工时间复盘推进过程</span></article>
-              <article><strong>地层建模模块</strong><span>将钻孔和地层数据转化为空间对象</span></article>
-              <article><strong>AI 诊断侧栏</strong><span>展示风险等级、关键指标和解释依据</span></article>
+              <article><strong>三维主场景</strong><span>统一展示线路、站点、盾构、地层、监测点和地下空间对象</span></article>
+              <article><strong>时序回放器</strong><span>按施工时间复盘盾构推进、参数变化和监测状态</span></article>
+              <article><strong>监测与运维视图</strong><span>把传感器、环片区段和结构状态关联到具体空间位置</span></article>
+              <article><strong>分析结果侧栏</strong><span>预留分析模块接入位置，用结构化指标和解释文本展示分析依据</span></article>
             </div>
           </div>
         </div>
@@ -116,7 +123,7 @@
           <p class="eyebrow">Prototype Modules</p>
           <h2>核心功能模块展示</h2>
           <p>
-            原型围绕“看清空间关系、回放施工过程、解释诊断依据”组织核心模块，展示复杂工程数据如何被转化为可浏览、可复盘、可解释的产品体验。
+            原型围绕“看清空间关系、回放施工过程、关联监测数据、解释分析依据”组织核心模块，展示复杂工程数据如何被转化为可浏览、可复盘、可验证的产品体验。
           </p>
         </div>
 
@@ -126,42 +133,42 @@
               <img src="./assets/metro-network.png" alt="三维地铁线路与站点展示" />
             </div>
             <h3>三维主场景</h3>
-            <p>统一展示地铁线路、站点、监测点与地下空间对象，作为整个数字孪生原型的空间底座。</p>
+            <p>统一展示地铁线路、站点、盾构区间、监测点与地下空间对象，作为数字孪生原型的空间底座。</p>
           </article>
           <article class="feature-card">
-            <div class="image-frame" data-placeholder="盾构监控与 AI 诊断">
-              <img src="./assets/tbm-monitor-ai.png" alt="盾构监控与 AI 结构安全诊断侧栏" />
+            <div class="image-frame" data-placeholder="盾构监控与分析侧栏">
+              <img src="./assets/tbm-monitor-ai.png" alt="盾构监控与分析结果展示侧栏" />
             </div>
-            <h3>盾构监控与 AI 诊断</h3>
-            <p>把施工趋势、结构指标、风险等级和诊断解释放在同一视图中，避免 AI 只输出单句结论。</p>
+            <h3>盾构监控与分析侧栏</h3>
+            <p>把施工趋势、结构化指标、阈值状态和解释文本放在同一视图中，作为后续分析模块接入的展示样例。</p>
           </article>
           <article class="feature-card">
-            <div class="image-frame" data-placeholder="掘进模拟">
-              <img src="./assets/tbm-digging-simulation.png" alt="盾构掘进模拟与实时监测数据" />
+            <div class="image-frame" data-placeholder="掘进状态模拟">
+              <img src="./assets/tbm-digging-simulation.png" alt="盾构掘进状态模拟与施工参数变化" />
             </div>
-            <h3>掘进模拟</h3>
-            <p>用三维动画表达盾构推进、管片拼装和施工参数变化，服务演示汇报场景。</p>
+            <h3>掘进状态模拟</h3>
+            <p>表达盾构机、地层环境、推进参数与施工曲线之间的细粒度关系，帮助用户理解掘进状态变化。</p>
           </article>
           <article class="feature-card">
             <div class="image-frame" data-placeholder="时序分析面板">
               <img src="./assets/time-series-panel.png" alt="盾构响应分析时序图" />
             </div>
             <h3>时序回放与趋势分析</h3>
-            <p>围绕推进速度、总推力、刀盘响应等指标，支撑施工过程复盘。</p>
+            <p>围绕推进速度、总推力、刀盘响应等指标，支持按施工时间回看参数变化和异常区间。</p>
           </article>
           <article class="feature-card">
             <div class="image-frame" data-placeholder="地层钻孔与开挖">
               <img src="./assets/geology-excavation.png" alt="地层钻孔与开挖工具" />
             </div>
             <h3>地层与钻孔建模</h3>
-            <p>将钻孔、地层面和开挖区域转化为空间对象，辅助理解施工环境。</p>
+            <p>将钻孔、地层面和开挖区域转化为空间对象，辅助理解盾构机与地层环境之间的关系。</p>
           </article>
           <article class="feature-card">
             <div class="image-frame" data-placeholder="环片监测视图">
               <img src="./assets/tunnel-ring-monitor.png" alt="隧道环片监测与结构状态" />
             </div>
-            <h3>环片监测视图</h3>
-            <p>展示监测区段、环片状态和关键变形指标，用于结构安全状态解释。</p>
+            <h3>环片运维与传感器监测</h3>
+            <p>展示监测区段、环片状态、传感器点位和关键变形指标，用于结构安全状态解释和后续运维分析。</p>
           </article>
         </div>
       </section>
@@ -171,26 +178,26 @@
           <p class="eyebrow">AI Coding Observation</p>
           <h2>AI Coding 在复杂项目中的使用体验观察</h2>
           <p>
-            该项目开发过程中，我深度使用 Claude Code / Codex 辅助需求拆解、组件开发、后端接口、数据处理和调试。
-            我的观察来自真实复杂代码库，而不是简单 demo。
+            项目开发过程中，我深度使用 Claude Code / Codex 辅助需求拆解、组件开发、后端接口、数据处理和调试。
+            这些观察来自真实复杂代码库，而不是简单 demo。
           </p>
         </div>
         <div class="ai-grid">
           <div class="panel">
             <h3>我的使用流程</h3>
             <ol class="flow-list">
-              <li><strong>需求拆解</strong><span>将系统拆分为三维场景、数据回放、地层模块、AI 诊断侧栏等任务</span></li>
-              <li><strong>上下文组织</strong><span>提供项目结构、关键文件、字段含义和业务规则</span></li>
-              <li><strong>代码生成</strong><span>辅助开发 Vue 组件、FastAPI 接口、Python 数据脚本</span></li>
-              <li><strong>调试修复</strong><span>根据报错、页面表现和接口返回结果多轮修正</span></li>
-              <li><strong>人工验收</strong><span>检查字段、链路、交互和业务逻辑是否符合预期</span></li>
+              <li><strong>需求拆解</strong><span>将系统拆分为三维场景、时序回放、地层模块、监测视图、分析侧栏等任务</span></li>
+              <li><strong>上下文组织</strong><span>提供项目结构、关键文件、字段含义、接口契约和业务规则</span></li>
+              <li><strong>代码生成</strong><span>辅助开发 Vue 组件、FastAPI 接口、Python 数据脚本和可视化逻辑</span></li>
+              <li><strong>调试修复</strong><span>根据报错、页面表现、接口返回结果和数据字段进行多轮修正</span></li>
+              <li><strong>人工验收</strong><span>检查字段、链路、交互和工程逻辑是否符合预期，避免只看代码可运行</span></li>
             </ol>
           </div>
           <div class="panel">
             <h3>真实痛点</h3>
             <div class="pain-card">
               <strong>上下文容易断裂</strong>
-              <p>多文件任务中，AI 容易只改当前文件，漏掉 API、composable、组件和字段之间的联动。</p>
+              <p>多文件任务中，AI 容易只改当前文件，遗漏 API、composable、组件和字段之间的联动。</p>
             </div>
             <div class="pain-card">
               <strong>领域字段理解不稳定</strong>
@@ -208,14 +215,32 @@
           <div class="panel pm-panel">
             <h3>如果我是 AI Coding 产品 PM</h3>
             <ul class="check-list">
-              <li><strong>代码库上下文地图：</strong>帮助 AI 理解主链路和依赖关系</li>
-              <li><strong>任务级开发计划：</strong>修改前说明影响范围和风险点</li>
+              <li><strong>代码库上下文地图：</strong>帮助 AI 理解主链路、依赖关系和字段契约</li>
+              <li><strong>任务级开发计划：</strong>修改前说明影响范围、风险点和需要同步的文件</li>
               <li><strong>验收面板：</strong>生成 diff 摘要、验证清单和潜在问题提示</li>
             </ul>
             <p class="closing-note">
               这个项目让我理解到：AI Coding 的核心价值不只是生成代码，而是在复杂业务项目中帮助开发者稳定理解上下文、控制变更风险，并完成可验证的任务闭环。
             </p>
           </div>
+        </div>
+      </section>
+
+      <section class="video-section section-shell" id="video">
+        <div class="video-card">
+          <div>
+            <p class="eyebrow">Demo Video</p>
+            <h2>脱敏演示视频</h2>
+            <p>
+              视频用于展示系统主流程、核心模块和产品设计思路。由于项目涉及工程数据与内部资料，演示内容仅使用脱敏历史样例数据及模拟展示数据。
+            </p>
+          </div>
+          <a
+            class="primary-button video-link"
+            href="https://fcngtbi6mzz1.feishu.cn/minutes/obcnfl6q7bd611726y84q73q?from=from_copylink"
+            target="_blank"
+            rel="noopener noreferrer"
+          >观看脱敏演示视频</a>
         </div>
       </section>
     </main>
