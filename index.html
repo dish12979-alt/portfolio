@@ -213,12 +213,24 @@
             </div>
           </div>
           <div class="panel pm-panel">
-            <h3>如果我是 AI Coding 产品 PM</h3>
-            <ul class="check-list">
-              <li><strong>代码库上下文地图：</strong>帮助 AI 理解主链路、依赖关系和字段契约</li>
-              <li><strong>任务级开发计划：</strong>修改前说明影响范围、风险点和需要同步的文件</li>
-              <li><strong>验收面板：</strong>生成 diff 摘要、验证清单和潜在问题提示</li>
-            </ul>
+            <h3>从实践到 AI Coding 产品思考</h3>
+            <div class="pm-insight-grid">
+              <article class="pm-insight">
+                <strong>影响范围识别</strong>
+                <p><span>实践场景：</span>前后端接口、组件状态和数据字段经常需要联动修改，AI 容易只完成当前文件。</p>
+                <p><span>产品启发：</span>修改前应先识别相关接口、组件、字段和依赖链路，帮助用户减少跨文件漏改。</p>
+              </article>
+              <article class="pm-insight">
+                <strong>领域知识注入</strong>
+                <p><span>实践场景：</span>环号、推进段、分区推力等字段有明确工程含义，单靠代码上下文很难稳定理解。</p>
+                <p><span>产品启发：</span>AI Coding 工具需要支持项目级知识沉淀，把业务术语和字段约束变成可复用上下文。</p>
+              </article>
+              <article class="pm-insight">
+                <strong>任务验收闭环</strong>
+                <p><span>实践场景：</span>代码生成完成不代表功能可用，还需要检查页面、接口、字段、交互和运行状态。</p>
+                <p><span>产品启发：</span>修改后应生成变更摘要、待检查页面/接口和验证清单，让用户快速判断结果是否可信。</p>
+              </article>
+            </div>
             <p class="closing-note">
               这个项目让我理解到：AI Coding 的核心价值不只是生成代码，而是在复杂业务项目中帮助开发者稳定理解上下文、控制变更风险，并完成可验证的任务闭环。
             </p>
